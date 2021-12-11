@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "227278204844",
+    "project_id": "linkbot-19492",
+    "storage_bucket": "linkbot-19492.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227278204844:android:b128287745b09ab5a39409",
+        "android_client_info": {
+          "package_name": "com.cosmic.linkbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227278204844-spc8iadbuu2qqj40qie7m4jdceh3i4st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNQkhOg8OqzRJal96LPFyx3IaVwVlh1qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227278204844-spc8iadbuu2qqj40qie7m4jdceh3i4st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

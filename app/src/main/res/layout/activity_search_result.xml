@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_orange">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/home_menu"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_main_menu_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/home_menu"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text="Search Results"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultCountBar"
+        android:layout_below="@id/topBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/count"/>
+
+    </RelativeLayout>
+
+    <!--SEARCH RESULTS HAVE NOT BEEN FOUND LAYOUT-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchResultsNotFound"
+        android:visibility="visible"
+        android:layout_below="@id/resultCountBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSorry"
+            android:text="Sorry, but we found no results that matched your search"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTryAgain"
+            android:layout_below="@id/tvSorry"
+            android:text="Try searching for another term..."
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="30dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchCard"
+            android:padding="10dp"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/tvTryAgain"
+            app:cardElevation="10dp"
+            android:background="@drawable/cardview_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/logo"
+                    android:src="@drawable/logo2"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search_bar"
+                    android:hint="Search for a link..."
+                    android:layout_toEndOf="@id/logo"
+                    android:layout_marginStart="20dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!--SUGGESTION LAYOUT-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/suggestionLayout"
+            android:layout_below="@+id/searchCard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSuggest"
+                android:text="Suggestions:"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <!--Bullet List Item 1-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bullet1"
+                android:layout_below="@id/tvSuggest"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/tvBullet1"
+                    android:layout_centerVertical="true"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tvBullet1"
+                    android:text="Make sure all words are spelled correctly."
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <!--Bullet List Item 2-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bullet2"
+                android:layout_below="@id/bullet1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/tvBullet2"
+                    android:layout_centerVertical="true"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tvBullet2"
+                    android:text="Try different keywords."
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <!--Bullet List Item 3-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bullet3"
+                android:layout_below="@id/bullet2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/tvBullet3"
+                    android:layout_centerVertical="true"
+                    android:background="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tvBullet3"
+                    android:text="You may not have any records saved with this keyword."
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/suggestionLayout"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/iv1"
+                android:src="@drawable/chidi"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"/>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/iv2"
+                android:layout_toEndOf="@id/iv1"
+                android:src="@drawable/basic"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--SEARCH RESULTS HAVE BEEN FOUND RECYCLER VIEW-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/resultCountBar"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveDocument"
+        android:tag="document"
+        android:text="Save All Links as Text Document"
+        android:textSize="22sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/restoreDeleted"
+        android:layout_below="@id/saveDocument"
+        android:layout_marginTop="20dp"
+        android:tag="restore"
+        android:text="Restore Deleted Links"
+        android:textSize="22sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
